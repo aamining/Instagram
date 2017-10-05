@@ -1,0 +1,46 @@
+
+
+<%= form_for @photo, :url => photos_path(@photo) do |f| %>
+
+  <%= f.label :caption %>
+  <%= f.text_field :caption %>
+
+  <%= f.hidden_field :user_id, value: @user.id %>
+  <%= f.submit "Create" %>
+<% end %>
+
+<%# @photos = [ Photo.new(id: 2), Photo.new(id: 1) ] %>
+
+<% @photos.each do |photo| %>
+  <%= photo.id %> |
+<% end %>
+
+
+
+
+
+<!-- BELOW THIS LINE IS DEMO STUFF -->
+
+<% @books = ["harry potter", "star wars"] %>
+
+<table>
+  <tr>
+    <th>books names</th>
+  </tr>
+
+<% @books.each do |book| %>
+  <tr>
+    <td><%= book %></td>
+  </tr>
+<% end %>
+</table>
+
+
+<h1>home#landing</h1>
+<p>Find me in app/views/landing/index.html.erb</p>
+
+<p>add login/login to application layout</p>
+<p>add shrine</p>
+<p>add bootstrap gem</p>
+<p>add link to new photo on landing page</p>
+<p>each phto is linked to a user</p>
